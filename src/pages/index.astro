@@ -4,27 +4,39 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
+// Get blog posts
+const posts = (await getCollection("blog")).sort((a, b) => {
+  const dateA = a.data.updatedDate ? a.data.updatedDate : a.data.pubDate;
+  const dateB = b.data.updatedDate ? b.data.updatedDate : b.data.pubDate;
+  return dateB.valueOf() - dateA.valueOf();
+});
 const last_posts = posts.slice(0, 3);
+
+
+// Get projects, sort them by 'order', and get the top 3
+const featured_projects = (await getCollection("project"))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-5xl font-bold">I'm Sarath Chandran Maimpilly</div>
+    <div class="text-3xl py-3 font-bold">Electrical Engineer</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        I’m an automotive and tech enthusiast, always looking for ways to solve problems and making life a little better through innovation.
+        <br><br>My background is in electrical engineering, and I’ve had the opportunity to dive into some exciting projects in the automotive and automation domains.
+        <br><br>It's been a wild ride, from validating EV charging systems to building deep learning loops for automated driving and supporting the development of perfectly keyless systems (PEPS). Each role has challenged me to grow in ways I never imagined - both technically and professionally.
+        <br><br>I’ve also been fortunate to take on leadership roles with IEEE and IAESTE, where I’ve developed my communication and leadership skills.
+        <br><br>If you’re up for a chat about tech, automotive innovations, or potential collaboration opportunities, I’d love to connect!
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn" href="https://linkedin.com/in/maimpilly" target="_blank"  rel="noopener noreferrer"> Let's connect!</a>
+      <a href="/contact" class="btn btn-outline ml-5">
+        Contact Me
       </a>
     </div>
   </div>
@@ -33,29 +45,22 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
+{
+    featured_projects.map((project) => (
+      <>
+        <HorizontalCard
+          title={project.data.title}
+          img={project.data.heroImage}
+          desc={project.data.description}
+          url={"/project/" + project.slug} {/*url={"/projects/" + project.slug}  url={"/project/" + createSlug(project.data.title, project.slug)}  */}
+          target="_self"
+          badge={project.data.badge}
+          {/*tags={project.data.tags}  -- >  Add/remove tags from home page */} 
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
   </div>

@@ -1,0 +1,71 @@
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" id="svg5" inkscape:version="1.1 (c68e22c387, 2021-05-23)" sodipodi:docname="architecture.svg" viewBox="15.38 15.38 180.92 64.5">
+  <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:document-units="mm" showgrid="true" inkscape:zoom="1.5144501" inkscape:cx="355.57461" inkscape:cy="116.54395" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1">
+    <inkscape:grid type="xygrid" id="grid831"/>
+  </sodipodi:namedview>
+  <defs id="defs2">
+    <inkscape:path-effect effect="bspline" id="path-effect26538" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <inkscape:path-effect effect="bspline" id="path-effect26373" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <inkscape:path-effect effect="bspline" id="path-effect1390" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <inkscape:path-effect effect="bspline" id="path-effect1378" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <marker style="overflow:visible" id="Arrow2Lstart" refX="0.0" refY="0.0" orient="auto" inkscape:stockid="Arrow2Lstart" inkscape:isstock="true">
+      <path transform="scale(1.1) translate(1,0)" d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z " style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round" id="path1018"/>
+    </marker>
+    <marker style="overflow:visible" id="marker1261" refX="0.0" refY="0.0" orient="auto" inkscape:stockid="Arrow1Lstart" inkscape:isstock="true">
+      <path transform="scale(0.8) translate(12.5,0)" style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt" d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z " id="path1000"/>
+    </marker>
+    <inkscape:path-effect effect="bspline" id="path-effect938" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <inkscape:path-effect effect="bspline" id="path-effect876" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <marker style="overflow:visible;" id="Arrow2Lend" refX="0.0" refY="0.0" orient="auto" inkscape:stockid="Arrow2Lend" inkscape:isstock="true">
+      <path transform="scale(1.1) rotate(180) translate(1,0)" d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z " style="fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;" id="path1441"/>
+    </marker>
+    <marker style="overflow:visible;" id="Arrow1Lend" refX="0.0" refY="0.0" orient="auto" inkscape:stockid="Arrow1Lend" inkscape:isstock="true">
+      <path transform="scale(0.8) rotate(180) translate(12.5,0)" style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;" d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z " id="path1423"/>
+    </marker>
+    <marker style="overflow:visible" id="Arrow1Lstart" refX="0.0" refY="0.0" orient="auto" inkscape:stockid="Arrow1Lstart" inkscape:isstock="true">
+      <path transform="scale(0.8) translate(12.5,0)" style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt" d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z " id="path1420"/>
+    </marker>
+    <inkscape:path-effect effect="bspline" id="path-effect1418" is_visible="true" lpeversion="1" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <symbol id="Process">
+      <title id="title837">Process</title>
+      <desc id="desc839">Any processing function.</desc>
+      <rect x="3.96875" y="9.260417" width="31.75" height="21.166666" style="stroke-width:0.529167" id="rect841"/>
+    </symbol>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <path style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow2Lend)" d="m 58.208333,26.458333 c 8.819708,0 17.639154,0 26.458333,0" id="path1416" inkscape:path-effect="#path-effect1418" inkscape:original-d="m 58.208333,26.458333 c 8.819708,2.65e-4 17.639154,2.65e-4 26.458333,0"/>
+    <path style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)" d="m 127,26.458333 c 8.81971,0 17.63915,0 26.45833,0" id="path872" inkscape:path-effect="#path-effect876" inkscape:original-d="m 127,26.458333 c 8.81971,2.65e-4 17.63915,2.65e-4 26.45833,0"/>
+    <path style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart)" d="m 127,68.791667 c 8.81971,0 17.63915,0 26.45833,0" id="path934" inkscape:path-effect="#path-effect938" inkscape:original-d="m 127,68.791667 c 8.81971,2.65e-4 17.63915,2.65e-4 26.45833,0"/>
+    <g id="g7199">
+      <use xlink:href="#Process" style="fill:#aaccee;stroke:#000000" id="use1346" x="0" y="0" width="100%" height="100%" transform="matrix(1.3333333,0,0,1,10.583333,6.614583)"/>
+      <text xml:space="preserve" style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583" x="36.890194" y="24.660784" id="text4374"><tspan sodipodi:role="line" id="tspan4372" style="font-size:3.88056px;stroke-width:0.264583" x="36.890194" y="24.660784">Data Acquisition</tspan><tspan sodipodi:role="line" style="font-size:3.88056px;stroke-width:0.264583" x="36.890194" y="29.511484" id="tspan6216">(using DMA)</tspan></text>
+    </g>
+    <g id="g36088">
+      <g id="g17010">
+        <use xlink:href="#Process" style="fill:#aaccee;stroke:#000000" id="use1375" x="0" y="0" width="100%" height="100%" transform="matrix(1.3333333,0,0,1,79.375001,6.614583)"/>
+        <text xml:space="preserve" style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583" x="105.68186" y="24.336618" id="text10377"><tspan sodipodi:role="line" id="tspan10375" style="stroke-width:0.264583" x="105.68186" y="24.336618">Circular Buffer</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="105.68186" y="29.187319" id="tspan12431">Management</tspan></text>
+      </g>
+    </g>
+    <g id="g36073">
+      <g id="g17024">
+        <use xlink:href="#Process" style="fill:#aaccee;stroke:#000000" id="use1377" x="0" y="0" width="100%" height="100%" transform="matrix(1.3333333,0,0,1,148.16667,6.614583)"/>
+        <text xml:space="preserve" style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583" x="174.64824" y="24.686029" id="text15476"><tspan sodipodi:role="line" id="tspan15474" style="stroke-width:0.264583" x="174.64824" y="24.686029">FFT Computation</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="174.64824" y="29.53673" id="tspan16066">(CMSIS-DSP)</tspan></text>
+      </g>
+    </g>
+    <g id="g36058">
+      <g id="g25957" transform="translate(34.395838)">
+        <use xlink:href="#Process" style="fill:#aaccee;stroke:#000000" id="use1379" x="0" y="0" width="100%" height="100%" transform="matrix(1.3333333,0,0,1,113.77083,48.947916)"/>
+        <text xml:space="preserve" style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583" x="140.42709" y="65.272301" id="text20234"><tspan sodipodi:role="line" id="tspan20232" style="stroke-width:0.264583" x="140.42709" y="65.272301">Peak Detection</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="140.42709" y="70.123001" id="tspan23090">and Frequency</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="140.42709" y="74.973701" id="tspan25100">Calculation</tspan></text>
+      </g>
+    </g>
+    <path style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart)" d="m 58.208337,68.791667 c 8.81971,0 17.63915,0 26.45833,0" id="path26369" inkscape:path-effect="#path-effect26373" inkscape:original-d="m 58.208337,68.791667 c 8.81971,2.65e-4 17.63915,2.65e-4 26.45833,0"/>
+    <path style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow2Lend)" d="m 177.27083,37.041666 c 0,7.055821 0,14.111375 0,21.166667" id="path26536" inkscape:path-effect="#path-effect26538" inkscape:original-d="m 177.27083,37.041666 c 2.7e-4,7.055821 2.7e-4,14.111375 0,21.166667"/>
+    <g id="g36042">
+      <use xlink:href="#Process" style="fill:#aaccee;stroke:#000000" id="use1381" x="0" y="0" width="100%" height="100%" transform="matrix(1.3333333,0,0,1,79.375001,48.947916)"/>
+      <text xml:space="preserve" style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583" x="105.65662" y="67.892891" id="text28234"><tspan sodipodi:role="line" id="tspan28232" style="stroke-width:0.264583" x="105.65662" y="67.892891">Coupling Factor</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="105.65662" y="72.743591" id="tspan30410">Estimation</tspan></text>
+    </g>
+    <g id="g36028">
+      <use xlink:href="#Process" style="fill:#aaccee;stroke:#000000" id="use25979" x="0" y="0" width="100%" height="100%" transform="matrix(1.3333333,0,0,1,10.583335,48.947916)"/>
+      <text xml:space="preserve" style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264583" x="37.563774" y="65.097595" id="text32653"><tspan sodipodi:role="line" id="tspan32651" style="stroke-width:0.264583" x="37.563774" y="65.097595">Output and</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="37.563774" y="69.948296" id="tspan35387">Communication</tspan><tspan sodipodi:role="line" style="stroke-width:0.264583" x="37.563774" y="74.798996" id="tspan33843">(UART)</tspan></text>
+    </g>
+  </g>
+</svg>

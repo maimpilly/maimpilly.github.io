@@ -5,29 +5,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">About Me</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+    A passionate electrical engineer with expertise in computer science, AI, and hardware systems, backed by combined 3+ years of full-time and working student experiences at BOSCH, MAHLE, and TCS. Skilled in embedded software development (C programming), hardware validation, and dynamic system modeling using MATLAB/Simulink, with a strong aptitude for problem-solving and cross-functional collaboration.
   </div>
 
   <div class="mb-5">
@@ -36,22 +18,69 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Embedded Software Developer (Working Student)"
+      subtitle="Aug 2024 – Jan 2025 at Robert Bosch GmbH, Stuttgart, Germany"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-6">
+        <li>Supported software development of vehicle access systems (BLE/UWB).</li>
+        <li>Validated third-party software components for AUTOSAR-based platforms.</li>
+        <li>Enhanced hardware abstraction layer reliability through microcontroller testing and integrated UWB MAC (CCC standards) via HiL testing.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="System Validation for Inductive Charging of EVs (Internship)"
+      subtitle="Oct 2023 – Mar 2024 at Mahle International GmbH, Stuttgart, Germany"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-6">
+        <li>Analyzed system measurements (MATLAB) and led presentations to the SAE team for WPT positioning (SAE J2954).</li>
+        <li>Reduced manual testing hours by 30% by restructuring automated test sequences.</li>
+        <li>Enhanced validation using C programming for signal processing and implementing CAN communication.</li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Engineering Development - Deep Learning Loop (Working Student)"
+      subtitle="Nov 2022 – Oct 2023 at Robert Bosch GmbH, Stuttgart, Germany"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class="list-disc ml-6">
+        <li>Generated ground truth for ADAS by developing data selection strategies.</li>
+        <li>Reduced validation errors by guiding an international team in the development process.</li>
+        <li>Enhanced processing accuracy and reduced processing time by 35% by implementing Python scripts for handling large XML/Excel files.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Assistant Systems Engineer - Informatica Developer"
+      subtitle="Oct 2020 – Feb 2022 at TATA Consultancy Services (TCS), Bangalore, India"
+    >
+      <ul class="list-disc ml-6">
+        <li>Enhanced data extraction efficiency by 15% by developing and testing Informatica ETL jobs.</li>
+        <li>Increased data processing efficiency by scheduling and automating workflows (Control M, Unix shell scripting).</li>
+        <li>Streamlined code deployment using Git, following agile methodology.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Master of Science in Electrical Engineering (Smart Systems)"
+      subtitle="2022 – Present at University of Stuttgart, Germany"
+    >
+      <ul class="list-disc ml-6">
+        <li><b>Master Thesis:</b> Embedded Real-Time Identification of Coupling Factor for Inductive Power Transfer Systems.</li>
+        <li><b>Research Thesis:</b> Industrial automation project with micro-services and virtual knowledge graphs.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Bachelor of Technology (Honors) in Electrical & Electronics Engineering"
+      subtitle="2016 – 2020 at Government Engineering College, Thrissur, India"
+    >
+      <ul class="list-disc ml-6">
+        <li><b>CGPA:</b> 8.44/10 (Awarded honors degree)</li>
+        <li><b>Thesis:</b> A Vision Based Approach for Control of Robotic Arm for Pick and Place Application.</li>
+      </ul>
     </TimeLineElement>
   </div>
 
@@ -61,32 +90,65 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <a href="https://www.coursera.org/specializations/deep-learning" target="_blank" rel="noopener noreferrer">
+        Deep Learning (Specialization) from Coursera by deeplearning.ai
+      </a>
     </li>
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <a href="https://www.coursera.org/professional-certificates/google-it-automation" target="_blank" rel="noopener noreferrer">
+        Google IT Automation with Python (Professional Certification)
+      </a>
+    </li>
+    <li>
+      <a href="https://www.edx.org/course/image-processing-and-analysis-for-life-scientists" target="_blank" rel="noopener noreferrer">
+        Image Processing and Analysis for Life Scientists, EPFLx
+      </a>
+    </li>
+    <li>
+      <span>Blockchain Architecture Design and Use Cases, IIT Kharagpur & IBM Research</span>
     </li>
   </ul>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold">Core Competencies</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <div class="mb-4">
+    <h3 class="text-lg font-semibold mb-2">Programming Languages</h3>
+    <ul class="list-disc md:columns-3 columns-2 mx-6">
+      <li>Python</li>
+      <li>C</li>
+      <li>MATLAB</li>
+    </ul>
+  </div>
+
+  <div class="mb-4">
+    <h3 class="text-lg font-semibold mb-2">Tools & Technologies</h3>
+    <ul class="list-disc md:columns-3 columns-2 mx-6">
+      <li>SQL</li>
+      <li>NoSQL</li>
+      <li>PLECS</li>
+      <li>TensorFlow & Keras</li>
+      <li>Informatica</li>
+      <li>Data Analysis</li>
+      <li>Docker</li>
+      <li>Kubernetes</li>
+      <li>AWS</li>
+      <li>Raspberry Pi</li>
+      <li>Linux</li>
+      <li>CAN</li>
+      <li>Git</li>
+      <li>Knowledge Graphs</li>
+    </ul>
+  </div>
+
+  <div class="mb-10">
+    <h3 class="text-lg font-semibold mb-2">Soft Skills</h3>
+    <ul class="list-disc md:columns-3 columns-2 mx-6">
+      <li>Attention to detail</li>
+      <li>Innovative thinking</li>
+      <li>Teamwork & Leadership</li>
+      <li>Analytical & Independent</li>
+    </ul>
+  </div>
 </BaseLayout>

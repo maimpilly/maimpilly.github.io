@@ -1,4 +1,6 @@
+# Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
-Sitemap: https://astrofy-template.netlify.app/sitemap-index.xml
+# Provide the location of the sitemap
+Sitemap: https://maimpilly.github.io/sitemap-index.xml
