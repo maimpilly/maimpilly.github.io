@@ -30,9 +30,9 @@ import { Image } from "astro:assets";
       }
       {
         updatedDate && (
-          <div>
+          <div class="text-sm italic opacity-75">
             {" "}
-            Last updated on <time>{updatedDate}</time>{" "}
+            Last updated on <time>{dayjs(updatedDate).format("ll")}</time>{" "}
           </div>
         )
       }

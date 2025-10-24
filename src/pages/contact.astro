@@ -11,7 +11,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out using the form below.
   </div>
 
+  <!-- Success message (hidden by default) -->
+  <div id="form-success" class="alert alert-success shadow-lg mb-6 hidden opacity-65">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <!-- This is the message you wanted -->
+      <span>Thanks for your message! I will get back to you soon.</span>
+    </div>
+  </div>
+
+  <!-- Error message (hidden by default) -->
+  <div id="form-error" class="alert alert-error shadow-lg mb-6 hidden opacity-65">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2 2m2-2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span>Oops! Something went wrong. Please try again.</span>
+    </div>
+  </div>
+
   <form
+    id="contact-form"
     action="https://formspree.io/f/xovkzdyb"
     method="POST"
     class="space-y-6"
@@ -24,7 +42,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           name="name"
           id="name"
           required
-          class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-base-100"
+          class="input input-bordered w-full"
         />
       </div>
     </div>
@@ -38,7 +56,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           type="email"
           autocomplete="email"
           required
-          class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-base-100"
+          class="input input-bordered w-full"
         />
       </div>
     </div>
@@ -51,13 +69,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           name="message"
           rows="8"
           required
-          class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-base-100"
+          class="textarea textarea-bordered w-full"
         ></textarea>
       </div>
     </div>
 
     <div>
       <button
+        id="submit-button"
         type="submit"
         class="btn btn-primary"
       >
@@ -66,3 +85,56 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </form>
 </BaseLayout>
+<script>
+  // Get all the elements we need
+  const form = document.getElementById('contact-form');
+  const submitButton = document.getElementById('submit-button');
+  const successMessage = document.getElementById('form-success');
+  const errorMessage = document.getElementById('form-error');
+
+  // Add an event listener to the form
+  form.addEventListener('submit', async (event) => {
+    // 1. Stop the default redirect
+    event.preventDefault();
+
+    // 2. Disable the button and show a "loading" state
+    submitButton.disabled = true;
+    submitButton.innerHTML = `
+      <span class="loading loading-spinner"></span>
+      Submitting...
+    `;
+
+    // 3. Send the data to Formspree
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      // 4. Handle the response
+      if (response.ok) {
+        // Success! Hide the form and show the success message
+        form.reset();
+        form.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+      } else {
+        // Error from Formspree
+        errorMessage.classList.remove('hidden');
+        // Re-enable the button
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Submit';
+      }
+    } catch (error) {
+      // Network error
+      errorMessage.classList.remove('hidden');
+      // Re-enable the button
+      submitButton.disabled = false;
+      submitButton.innerHTML = 'Submit';
+    }
+  });
+</script>

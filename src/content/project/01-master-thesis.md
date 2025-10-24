@@ -12,7 +12,7 @@ For my master's thesis, I tackled a problem I find fascinating: making wireless 
 
 In simple terms: Wireless Power Transfer (WPT) systems are incredibly sensitive to coil alignment. A small misalignment can drastically drop efficiency. I wanted to know: could I build a system using a low-cost microcontroller that could *instantly* measure this alignment in real-time? This project was my answer.
 
-This project is a foundation upon which further research can be undertook, for use cases like valet parking and was done with the Institute for Energy Conversion (IEW).
+This project is a foundation upon which further research can be undertook, for use cases like valet parking and was done with the Institute for Electrical Energy Conversion (IEW).
 
 ### Objective
 The core problem was to design, build, and validate an embedded system capable of real-time parameter identification for a WPT system. Specifically, I focused on estimating the **coupling factor (*k*)**, a key parameter that directly represents the physical alignment and magnetic coupling between the transmitter and receiver coils.
