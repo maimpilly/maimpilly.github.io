@@ -3,7 +3,7 @@
 This repository contains the source code for my personal website, where I showcase my projects, experience, and blog posts.
 
 
-The live site is available at: **[https://maimpilly.github.io]**
+The live site is available at: **[https://www.maimpilly.de]**
 
 ---
 
