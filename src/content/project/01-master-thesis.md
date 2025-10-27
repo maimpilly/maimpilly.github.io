@@ -3,7 +3,7 @@ title: 'Real-Time WPT: Identifying Coil Coupling in 5ms on an Embedded STM32'
 description: 'A deep dive into my master''s thesis, where I designed and built an embedded system to measure WPT coil alignment in real-time using FFT analysis on an STM32.'
 heroImage: '/pictures/projects/01_Testbench.svg'  
 badge: 'Master Thesis'
-tags: ['Wireless Power Transfer', 'MATLAB', 'Embedded Systems', 'STM32', 'Digital Signal Processing']
+tags: ['Wireless Power Transfer', 'MATLAB', 'Embedded Systems', 'STM32']
 githubUrl: 'https://github.com/maimpilly/Master-Thesis'
 order: 1
 ---

@@ -3,7 +3,7 @@ title: 'From Data Chaos to Clarity: Building a Virtual Knowledge Graph for Indus
 description: 'How I built a prototype to unify and add meaning to heterogeneous data (NFS, S3, MongoDB) using a data catalog and a virtual knowledge graph.'
 heroImage: '/pictures/projects/02_prototype.png'
 badge: 'Research Thesis'
-tags: ['Data Management', 'Virtual Knowledge Graph', 'Microservice Architecture', 'Ontology', 'Data Catalog', 'Big Data', 'Heterogeneous Data']
+tags: ['Big Data', 'Virtual Knowledge Graph', 'Docker', 'Heterogeneous Data']
 githubUrl: 'https://github.com/maimpilly/research-project'
 order: 2
 ---

@@ -2,7 +2,7 @@
 title: 'Diving into FreeRTOS: A Multi-Tasking App on the STM32'
 description: 'My hands-on project building a real-time application with FreeRTOS, demonstrating multitasking, message queues, and mutexes on an STM32.'
 heroImage: '/post_img.webp'
-tags: ['RTOS', 'STM32', 'Embedded Systems', 'Real-Time Systems']
+tags: ['RTOS', 'STM32', 'Embedded Systems']
 githubUrl: 'https://github.com/maimpilly/STM32-FreeRTOS-Application'
 order: 49
 ---

@@ -2,7 +2,7 @@
 title: 'From MCAL to AUTOSAR: A Journey Through the Automotive Software Stack'
 description: 'How I taught myself the core layers of automotive software, from a C-based MCAL driver to a Python CAN bus and a full AUTOSAR application.'
 heroImage: '/pictures/projects/50_autosar.png'
-tags: ['AUTOSAR', 'CAN Bus', 'MCAL', 'Embedded Systems', 'Python', 'Automotive']
+tags: ['AUTOSAR', 'CAN Bus', 'MCAL', 'Embedded Systems']
 order: 50
 ---
 
