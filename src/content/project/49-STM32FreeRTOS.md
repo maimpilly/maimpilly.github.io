@@ -1,15 +1,15 @@
 ---
 title: 'Diving into FreeRTOS: A Multi-Tasking App on the STM32'
 description: 'My hands-on project building a real-time application with FreeRTOS, demonstrating multitasking, message queues, and mutexes on an STM32.'
-heroImage: '/post_img.webp'
+heroImage: '/pictures/projects/49_heroimage.png'
 tags: ['RTOS', 'STM32', 'Embedded Systems']
 githubUrl: 'https://github.com/maimpilly/STM32-FreeRTOS-Application'
 order: 49
 ---
 
-As an engineer, I'm comfortable writing C code for microcontrollers, but I've always been fascinated by the next level of complexity: how do you manage *multiple* things happening at once? How does a real-world device read a sensor, listen for a button press, and update a display "at the same time" without becoming a tangled mess of code? This is the exact problem that a **Real-Time Operating System (RTOS)** is designed to solve.
+I’ve worked with C on microcontrollers and decided to tackle concurrency. Real systems need to sense, react, and present information at the same time, and simple approaches quickly become unmanageable. A **Real-Time Operating System (RTOS)** is designed to handle that complexity. 
 
-To truly understand this, I went hands-on. The goal was to experience concepts that I heard in lectures (Pre-emptive scheduling, mutex, etc.). I set up a project on an STM32 Nucleo board with the goal of building a "real" application from scratch, moving beyond a simple blinky to implement the core pillars of an RTOS.
+The goal was to experience concepts that I heard in lectures (Pre-emptive scheduling, mutex, etc.). I set up a project on an STM32 Nucleo board with the goal of building a "real" application from scratch, moving beyond a simple blinky to implement the core pillars of an RTOS.
 
 ### Objective
 My goal was to demonstrate and master three fundamental RTOS concepts using FreeRTOS on an STM32H7:
@@ -19,10 +19,10 @@ My goal was to demonstrate and master three fundamental RTOS concepts using Free
 3.  **Shared Resource Management:** To allow two tasks to share a single piece of hardware (the UART serial port) without a **race condition**, a classic bug where they try to use it at the same time and corrupt the data.
 
 ### My Contribution
-I designed and wrote this application from the ground up using the STM32CubeIDE. My process involved:
+I designed this application using the STM32CubeIDE. My process involved:
 
 * **System Configuration:** CubeIDE's graphical tool to configure the MCU's clocks, GPIO pins (for LEDs and the button), and the UART peripheral.
-* **RTOS Configuration:** I enabled the FreeRTOS middleware (using the CMSIS v2 API) and configured its settings.
+* **RTOS Configuration:** Enabled the FreeRTOS middleware (using the CMSIS v2 API) and configured its settings.
 * **Application Logic:** Wrote C code for the three main tasks:
     1.  A simple periodic task for the slow-blinking LED.
     2.  A "producer" task that monitors the user button.
@@ -49,7 +49,7 @@ My next challenge: how to make one task react to another. The "bad" way is to us
 * **Result:** This was incredibly powerful. The LED task uses *zero* CPU time while it's waiting. As soon as the button task sends a message, the RTOS instantly wakes up the LED task, which runs, toggles the light, and goes back to sleep. This event-driven pattern is the foundation of efficient, responsive design.
 
 #### 3. Learning: The Mutex and the "Race Condition"
-My final challenge was the "Oh, *that's* why!" moment.
+This last hurdle clarified a behavior I hadn’t fully understood until then.
 
 * **Problem:** I had both my LED tasks print a status message to the serial port (UART). The result was a garbled mess, like `Task 1: LED ToggTlaesdk 2: LED Toggled`. This is a classic **race condition**, where both tasks tried to write their data at the exact same time.
 * **Action:** I fixed this using a **mutex** (which stands for "mutual exclusion"). A mutex is a "lock" that only one task can hold at a time.

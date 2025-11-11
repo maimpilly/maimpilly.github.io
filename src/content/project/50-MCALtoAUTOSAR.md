@@ -19,7 +19,7 @@ To answer these questions for myself, I embarked on a side quest: to build a "vi
 ### 1. The Foundation: Simulating the MCAL
 My journey started at the very bottom: the hardware. How does software talk to the "metal"?
 
-* **Problem:** High-level code needs to control physical hardware (like a sensor or chip), but it can't just "talk" to it. It needs a translator.
+* **Problem:** You can't control hardware directly from high-level code, you need a layer that translates commands into register-level operations
 * **Action:** I built a virtual low-level driver in C to simulate the **MCAL (Microcontroller Abstraction Layer)**. This is the software layer that directly controls the hardware registers. I designed a "virtual" SPI peripheral with its own control, status, and data registers. My C code then used bitwise operations to configure and interact with these simulated registers.
 * **Result:** I created a clean, reusable API with two functions: `Spi_Init()` and `Spi_ReadWriteByte()`. Any "application" could now just call these functions without ever needing to know the complex register addresses or bitmasks.
 
@@ -38,7 +38,7 @@ My journey started at the very bottom: the hardware. How does software talk to t
   <span class="text-base italic">Diagram of SPI with daisy-chained slaves.</span>
   
   <!-- This is the small, less opaque attribution line -->
-  <span class="block text-xs opacity-40 mt-1">
+  <span class="block text-xs opacity-25 mt-1">
     Image by <a href="https://commons.wikimedia.org/wiki/User:Omegatron" target="_blank" rel="noopener noreferrer" class="underline">Omegatron</a>, 
     licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" rel="noopener noreferrer" class="underline">CC BY-SA 3.0</a>.
   </span>
@@ -60,7 +60,7 @@ With a single "component" sorted, my next question was how to get it to talk to 
  Diagram showing the CAN bus simulated over UDP, with an Engine ECU and a Dashboard ECU communicating.
 </figcaption>
 
-* **Result:** I had a live, running simulation! The engine ECU would encode its data into a raw byte payload (in the format of CAN messages), and the dashboard would receive those bytes, decode them, and display the correct RPM and speed in real-time.
+* **Result:** The simulation successfully mimicked real-time communication between ECUs. The engine module generated CAN-formatted byte payloads, which the dashboard module decoded to display RPM and speed.
 * **Learning:** This taught me the core principles of in-vehicle networking. I had to design a message format, handle the (de)serialization of data into bytes, and manage a "producer-consumer" relationship, all of which are central to how real ECUs communicate.
 
 ### 3. The Application: Building an AUTOSAR SWC

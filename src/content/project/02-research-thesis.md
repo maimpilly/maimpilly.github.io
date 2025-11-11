@@ -8,9 +8,11 @@ githubUrl: 'https://github.com/maimpilly/research-project'
 order: 2
 ---
 
-In the world of industrial automation and Big Data, everything is based on data. You have massive volumes of it, arriving at high speed, in every format imaginable, from files on a network drive (NFS) to objects in cloud storage (S3) and documents in a NoSQL database (MongoDB). This is the definition of **heterogeneous data**, and it's a huge challenge. The data is isolated, "dumb," and has no shared meaning, making it incredibly difficult to use for tasks like fault diagnosis.
+In the world of industrial automation and Big Data, everything is based on data. 
 
-For this research thesis, I decided to tackle this problem head-on. My work, formally titled **"Prototypical Realization and Evaluation of the Data Organizaton and Management for Heterogeneous Data,"** was focused on one question: Could I build a system that unifies these disparate data sources and gives them a shared "brain" to make them intelligently searchable?
+You have massive volumes of it, arriving at high speed, in every format imaginable, from files on a network drive (NFS) to objects in cloud storage (S3) and documents in a NoSQL database (MongoDB). This is the definition of **heterogeneous data**, and it's a huge challenge. The data is isolated, "dumb," and has no shared meaning, making it incredibly difficult to use for tasks like fault diagnosis.
+
+For this research thesis, I focused my research on solving this issue. My work, formally titled **"Prototypical Realization and Evaluation of the Data Organizaton and Management for Heterogeneous Data,"** was focused on one question: Could I build a system that unifies these different data sources and gives them a shared "brain" to make them intelligently searchable?
 
 The work was done at the Institute for Industrial Automation (IAS).
 
@@ -32,9 +34,9 @@ My objective was to design and build a functional prototype of a data management
 Since this was my research thesis, I was responsible for the end-to-end design, implementation, and evaluation of this prototype. My specific contributions included:
 
 * **Data Catalog Design:** I built the central data catalog using **Cassandra**. This catalog served as the "index" or "phone book" for all data, tracking what lived where.
-* **Ontology Modeling:** I used **Protégé** to develop the custom ontology, defining the classes (like 'Sensor') and properties (like 'hasFrequencyData') needed for our industrial use case.
-* **VKG Implementation:** I used **Ontop** to create the Virtual Knowledge Graph. This component's job was to translate incoming SPARQL queries (what the user *wants*) into the specific queries each data source *understands*.
-* **Problem Solving the "Connector":** I hit a major roadblock: Ontop couldn't talk to Cassandra directly. I researched and implemented **Trino** (a distributed SQL query engine) as the "universal translator" to sit between them.
+* **Ontology Modeling:** Used **Protégé** to develop the custom ontology, defining the classes (like 'Sensor') and properties (like 'hasFrequencyData') needed for our industrial use case.
+* **VKG Implementation:** Used **Ontop** to create the Virtual Knowledge Graph. This component's job was to translate incoming SPARQL queries (what the user *wants*) into the specific queries each data source *understands*.
+* **Problem Solving the "Connector":** I hit a major roadblock. Ontop couldn't talk to Cassandra directly. As a solution, I implemented **Trino** (a distributed SQL query engine) as the "universal translator" to sit between them.
 * **Prototyping:** I containerized the entire architecture using **Docker** and developed a simple front-end web UI with **Python** and **Flask** to prove the concept.
 
 ### Technical Details
@@ -61,7 +63,7 @@ The solution was **Trino**. I implemented it as an intermediary. The query flow 
   Sequence diagram of the complete concept
 </figcaption>
 
-This was a major "aha!" moment. I didn't need a perfect, all-in-one tool. I could compose a *chain* of specialized tools to solve the problem.
+This discovery unlocked the rest of the architecture. I didn't need a perfect, all-in-one tool. I could compose a *chain* of specialized tools to solve the problem.
 
 **My Key Takeaway: Virtualization > Migration**
 The biggest lesson was the power of the Virtual Knowledge Graph (or Ontology-Based Data Access) approach. I didn't have to build a new, multi-million dollar data warehouse and migrate everything (which is slow, expensive, and risky). Instead, I built a *smart semantic layer* on top of the existing, messy data sources. This approach provides huge flexibility, allowing us to add new data sources or update the business "rules" (the ontology) without re-engineering the entire data pipeline.
@@ -73,4 +75,4 @@ The biggest lesson was the power of the Virtual Knowledge Graph (or Ontology-Bas
 
 Further information about the project and more validation steps implemented can be seen in the Github repo.
 
-This project proved that by combining a data catalog (to know *where* data is) with a VKG (to know *what* data is), we can successfully tame the chaos of heterogeneous data.
+This project proved that by combining a data catalog (to know *where* data is) with a VKG (to know *what* data is), we can successfully control the chaos of heterogeneous data.
